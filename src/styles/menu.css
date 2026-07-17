@@ -1,0 +1,295 @@
+body {
+  background: #0f0f12;
+  color: white;
+}
+
+.menu-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.header p {
+  margin-top: 8px;
+  color: #9ca3af;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.saved-btn,
+.logout-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid #343444;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.saved-btn:hover,
+.logout-btn:hover {
+  background: #292937;
+}
+
+.badge {
+  margin-left: 8px;
+  background: orange;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* ================= FILTER ================= */
+
+.filter-container {
+  margin-top: 30px;
+  padding: 30px;
+  background: #1b1b25;
+  border-radius: 18px;
+  border: 1px solid #292937;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.chips button {
+  background: transparent;
+  color: white;
+  border: 1px solid #444;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.chips button:hover {
+  background: #292937;
+}
+
+.chips .active {
+  background: #f97316;
+  border: none;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  background: #111114;
+  color: white;
+  border: 1px solid #444;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+}
+
+.search-box button {
+  padding: 14px 25px;
+  background: #f97316;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #ea580c;
+}
+
+/* ================= COUNT ================= */
+
+.count {
+  margin: 30px 0;
+  color: #9ca3af;
+}
+
+/* ================= GRID ================= */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ================= CARD ================= */
+
+.food-card {
+  display: block;
+  background: #1b1b25;
+  border-radius: 18px;
+  overflow: hidden;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #292937;
+  transition: 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.food-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.food-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= BADGES ================= */
+
+.veg,
+.nonveg {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.veg {
+  background: #22c55e;
+}
+
+.nonveg {
+  background: #ef4444;
+}
+
+/* ================= CONTENT ================= */
+
+.food-content {
+  padding: 18px;
+}
+
+.food-content small {
+  color: orange;
+  font-weight: 600;
+}
+
+.food-content h3 {
+  margin: 10px 0;
+}
+
+.food-content p {
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* ================= EMPTY STATE ================= */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+
+  margin-top: 40px;
+
+  border: 1px dashed #444;
+  border-radius: 18px;
+
+  background: #181820;
+
+  color: #9ca3af;
+}
+
+.empty-state h2 {
+  color: white;
+  margin-bottom: 12px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    padding: 20px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-buttons {
+    flex-wrap: wrap;
+  }
+
+  .filter-container {
+    padding: 20px;
+  }
+
+  .chips {
+    gap: 8px;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .header h1 {
+    font-size: 36px;
+  }
+}

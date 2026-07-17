@@ -1,0 +1,217 @@
+.saved-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  color: white;
+}
+
+/* ================= HEADER ================= */
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.saved-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.saved-header p {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.back-btn {
+  padding: 12px 22px;
+  border: 1px solid #343444;
+  border-radius: 12px;
+  background: transparent;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #20212c;
+}
+
+/* ================= GRID ================= */
+
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* ================= CARD ================= */
+
+.saved-card {
+  background: #1b1b25;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #2d2f3b;
+  transition: 0.3s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= IMAGE ================= */
+
+.image-container {
+  position: relative;
+}
+
+.saved-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+/* ================= BADGES ================= */
+
+.veg-badge,
+.nonveg-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.veg-badge {
+  background: #2f855a;
+}
+
+.nonveg-badge {
+  background: #c53030;
+}
+
+/* ================= CONTENT ================= */
+
+.saved-content {
+  padding: 20px;
+}
+
+.saved-content small {
+  display: inline-block;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.saved-content h3 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.saved-content p {
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.saved-content span {
+  display: block;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+/* ================= REMOVE BUTTON ================= */
+
+.remove-btn {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dc2626;
+  border-radius: 12px;
+  background: transparent;
+  color: #f87171;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: #dc2626;
+  color: white;
+}
+
+/* ================= EMPTY PAGE ================= */
+.empty-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 90px;
+
+  text-align: center;
+}
+
+.empty-page p {
+  color: #9ca3af;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.browse-link {
+  color: #f59e0b;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.browse-link:hover {
+  color: #fb923c;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .saved-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .saved-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .back-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-page {
+    padding: 20px;
+  }
+
+  .saved-header h1 {
+    font-size: 36px;
+  }
+
+  .saved-card img {
+    height: 220px;
+  }
+
+  .saved-content h3 {
+    font-size: 26px;
+  }
+
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
